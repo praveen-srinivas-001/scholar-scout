@@ -1,4 +1,10 @@
+import "../css/Navbar.css";
+
+import { Link } from "react-router-dom";
+
 function Navbar() {
+  const handleLogin = () => {};
+  const handleSignup = () => {};
   return (
     <nav>
       <div className="nav-links">
@@ -9,13 +15,11 @@ function Navbar() {
         <Link to="/contact">Contact</Link>
       </div>
       <div className="auth-links">
-        <Link to="/login" onClick={handleLogin}>
-          Log In
-        </Link>
-        <Link to="/signup" onClick={handleSignup}>
-          Sign Up
-        </Link>
+        <Link to="/login">Log In</Link>
+        <Link to="/signup">Sign Up</Link>
       </div>
     </nav>
   );
 }
+
+export default Navbar;
