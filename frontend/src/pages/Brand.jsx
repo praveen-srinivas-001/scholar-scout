@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 function Brand() {
   var [theme, setTheme] = useState(false);
   var styling = {
-    backgroundColor: theme ? "#3367d6" : "white",
-    color: theme ? "white" : "#3367d6",
+    backgroundColor: theme ?  "white": "#3367d6",
+    color: theme ? "#3367d6" : "white",
     
   };
   return (
