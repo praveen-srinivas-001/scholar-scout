@@ -59,5 +59,24 @@ nav a.auth-button:hover {
   background-color: #3367d6;
   display: flex;
   justify-content: space-between;
+  justify-items: center;
   padding-left: 20px;
 }
+
+.auth{
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  gap: 8px;
+}
+
+.auth .auth-links{
+  text-decoration: none;
+  color: white;
+
+}
+.auth button{
+  background-color: #320101;
+  border-radius: 50%;
+}
+

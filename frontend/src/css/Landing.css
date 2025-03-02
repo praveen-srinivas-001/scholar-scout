@@ -8,7 +8,33 @@
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   gap: 30px;
+  margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.parent {
+  display: grid;
+  margin: 40px 0px 0px 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  /* justify-content: space-between; */
+  gap: 50px;
+}
+
+.div1, .div2, .div3{
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 20px;
+}
+
+.scholarship-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.scholarship-action{
+  display: flex;
+  justify-content: space-around;
 }
 
 .feature-card {
@@ -34,4 +60,27 @@
   font-size: 1.4rem;
   margin-bottom: 15px;
   color: #333;
+}
+
+
+.top{
+  display: flex;
+  flex-direction: row;
+}
+
+.landimg{
+  height: 50vh;
+  width: 50vw;
+}
+
+.context{
+  padding: 30px;
+}
+
+.scholarship-action button{
+  background-color:#4285f4;
+  color: white;
+  height:50px;
+  width: 20vw;
+  border-radius: 10px;
 }

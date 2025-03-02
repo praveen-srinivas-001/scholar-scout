@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
 import "../../css/Auth.css"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   return (
       <div id="loginModal" className="login-modal">
         <div className="modal-content">
          <h2>Login</h2>
 
-          <form>
-            <div className="form-group">
+          <form onSubmit={() => {navigate('/home')}}>
+            <div className="form-input">
               <label htmlFor="login-email">Email Address</label>
               <input type="email" id="login-email" required />
             </div>
 
-            <div className="form-group">
+            <div className="form-input">
               <label htmlFor="login-password">Password</label>
               <input type="password" id="login-password" required />
             </div>
