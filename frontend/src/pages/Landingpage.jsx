@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Brand from "./Brand";
-import "../images/scholars.jpeg";
+import Image from  "../images/scholars.jpeg";
 import "../css/Landing.css";
 function Landingpage() {
   const handleLogin = () => {};
@@ -12,10 +12,10 @@ function Landingpage() {
       <hr />
       {/* <Navbar /> */}
       <div class="container">
-        {/* <!-- Features Section --> */}
+        {/* Features Section */}
         <section className="top">
           <img
-            src="../imgages/scholars.jpeg"
+            src={Image}
             alt="scholars"
             className="landimg"
           />
