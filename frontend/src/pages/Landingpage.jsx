@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Brand from "./Brand";
 import Image from  "../images/scholars.jpeg";
 import "../css/Landing.css";
+
 function Landingpage() {
   const handleLogin = () => {};
   const handleSignup = () => {};

@@ -7,7 +7,7 @@ import Login from "./pages/Authentication/Login.jsx"
 import Signup from "./pages/Authentication/Signup.jsx"
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-// import './App.css'
+
 
 function App() {
   return (

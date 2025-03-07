@@ -1,5 +1,5 @@
 nav {
-  background-color: #3367d6;
+  /* background-color: #3367d6; */
   padding: 10px;
   text-align: center;
   display: flex;
@@ -18,7 +18,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
   margin: 0 10px;
   padding: 5px 10px;
@@ -31,20 +31,20 @@ nav a:hover {
 }
 
 nav a.auth-button {
-  background-color: white;
-  color: #3367d6;
+  /* background-color: white; */
+  /* color: #3367d6; */
   font-weight: bold;
   padding: 7px 15px;
   margin-left: 10px;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
 }
 
 nav a.auth-button:hover {
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   nav {
     flex-direction: column;
   }
@@ -53,10 +53,10 @@ nav a.auth-button:hover {
   .auth-links {
     margin: 10px 0;
   }
-}
+} */
 
 .brand {
-  background-color: #3367d6;
+  /* background-color: #3367d6; */
   display: flex;
   justify-content: space-between;
   justify-items: center;
@@ -72,11 +72,11 @@ nav a.auth-button:hover {
 
 .auth .auth-links{
   text-decoration: none;
-  color: white;
+  /* color: white; */
 
 }
 .auth button{
-  background-color: #320101;
+  /* background-color: #320101; */
   border-radius: 50%;
 }
 
