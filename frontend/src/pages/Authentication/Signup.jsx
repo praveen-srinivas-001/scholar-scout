@@ -8,7 +8,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleSubmit = async (event) => {
+  const handleSignup = async (event) => {
     event.preventDefault();
     console.log("entered handlesubmit");
     const req = await axios.post("https://localhost:3001", {
@@ -31,7 +31,7 @@ function Signup() {
     <div id="signupModal" className="signup-modal">
       <div className="modal-content">
         <h2>Sign up</h2>
-        <form>
+        <form onSubmit={handleSignup}>
           <div className="form-input">
             <label htmlFor="signup-name">Full Name</label>
             <input type="text" id="signup-name" value={name} onChange={(e)=> setName(e.target.value)} required />
