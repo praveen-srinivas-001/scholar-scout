@@ -22,17 +22,17 @@ app.get('/', (req, res) => {
 app.post('/signup', async(req, res) => {
     try{
         const {userName, emailId, password} = req.body; 
-        // const hashedPass = await bcrypt.hash(password, 10);
+        const hashedPass = await bcrypt.hash(password, 10);
 
-        // const newuser = new signup({
-        //     userName: userName,
-        //     emailId: emailId,
-        //     password: hashedPass, 
-        // });
-        // await newuser.save();
-        res.status(200).json({message: req.body})
+        const newuser = new signup({
+            userName: userName,
+            emailId: emailId,
+            password: hashedPass, 
+        });
+        await newuser.save();
+        res.status(200).json({message: "you are a part of scholarscout", isSignUp: true});
     } catch(error) {
-        res.status(200).json({message: "something went wrong, please fill it properly"});
+        res.status(500).json({message: "something went wrong, please fill it properly", isSignUp: false});
     }
 });
 
