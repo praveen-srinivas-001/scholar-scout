@@ -10,6 +10,7 @@ import Signup from "./pages/Authentication/Signup.jsx"
 import Scholarships from "./pages/Scholarships";
 // import ScholarshipDetails from "./pages/ScholarshipDetails";
 import Profile from "./pages/Profile";
+import Bookmarks from "./pages/Bookmarks.jsx";
 // import Bookmarks from "./pages/Bookmarks";
 
 
@@ -24,6 +25,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/scholarships" element={<Scholarships />} />
+          <Route path="/bookmarks" element={<Bookmarks />} />
+
         </Routes>
       </BrowserRouter>
     </>

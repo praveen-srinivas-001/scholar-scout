@@ -11,7 +11,7 @@ function Login() {
 
   const handleLogin = async(event) =>{
     event.preventDefault();
-    const req = await axios.post("https://scholar-scout.onrender.com/login",{
+    const req = await axios.post("https://scholor-backend.onrender.com/login",{
       emailId : emailId,
       password: password
     });
