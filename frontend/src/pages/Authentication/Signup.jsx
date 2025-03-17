@@ -12,7 +12,7 @@ function Signup() {
   const handleSignup = async (event) => {
     event.preventDefault();
     // console.log("entered handlesubmit");
-    const req = await axios.post("http://localhost:5000/signup", {
+    const req = await axios.post("https://scholar-scout.onrender.com/signup", {
       userName: name,
       emailId: email,
       password: pass
