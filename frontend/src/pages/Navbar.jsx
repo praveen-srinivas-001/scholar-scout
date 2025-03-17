@@ -1,20 +1,29 @@
-// import "../css/Navbar.css";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../css/Navbar.css';
 
-import { Link } from "react-router-dom";
-
-function Navbar() {
-
+const Navbar = () => {
   return (
-    <nav>
-      <div className="nav-links">
-        <Link to="/home">Home</Link>
-        <Link to="/scholarships">Scholarships</Link>
-        <Link to="/resources">Resources</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+    <nav className="navbar">
+      <div className="container">
+        <h1 className="logo">Edu<span style={{color:"blue"}}>Nest</span></h1>
+        
+        <div className="nav-links">
+          <Link className='link' to="/home">Home</Link>
+          <Link className='link' to="/scholarships">Scholarships</Link>
+          <Link className='link' to="/bookmarks">Bookmarks</Link>
+          <Link className='link' to="/profile">Profile</Link>
+        </div>
+        
+        <div className="auth-buttons">
+          <Link to="/login" className="link">Login</Link>
+          <Link to="/signup" className="link">signup</Link>
+          {/* <Link to="/profile" className="link">My Account</Link> */}
+          {/* <Link to="/scholarships" className="btn">Find Scholarships</Link> */}
+        </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

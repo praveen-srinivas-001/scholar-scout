@@ -1,87 +1,38 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Brand from "./Brand";
-import Image from  "../images/scholars.jpeg";
+import Scholarships from "./Scholarships";
+import Image from  "../images/hero.gif";
 import "../css/Landing.css";
 
 function Landingpage() {
-  const handleLogin = () => {};
-  const handleSignup = () => {};
   return (
     <>
-      <Brand />
-      <hr />
-      {/* <Navbar /> */}
+      <Navbar />
       <div class="container">
-        {/* Features Section */}
         <section className="top">
           <img
             src={Image}
             alt="scholars"
             className="landimg"
           />
-          <h1 className="context">Find your Personalized Scholarships here.</h1>
-        </section>
-        <hr />
-        <section className="sholarship-container"></section>
-
-        <h1>Featured Scholarships</h1>
-        <div class="parent">
-          <div class="div1">
-            <div className="scholarship-info">
-              <h3 className="scholarship-name">STEM scholarship</h3>
-              <p className="amount">$30000</p>
-            </div>
-            <div className="scholarship-action">
-              {/* <button>bookmark</button> */}
-              <button>apply now</button>
-            </div>
-          </div>
-          <div class="div2">
-            <div className="scholarship-info">
-              <h3 className="scholarship-name">STEM scholarship</h3>
-              <p className="amount">$30000</p>
-            </div>
-            <div className="scholarship-action">
-              <button>apply now</button>
-            </div>
-          </div>
-          <div class="div3">
-            <div className="scholarship-info">
-              <h3 className="scholarship-name">STEM scholarship</h3>
-              <p className="amount">$30000</p>
-            </div>
-            <div className="scholarship-action">
-              <button>apply now</button>
-            </div>
-          </div>
-        </div>
-
-        <section class="features">
-          <div class="feature-card">
-            <h3>Personalized Matching</h3>
-            <p>
-              Our intelligent algorithm matches you with scholarships that fit
-              your unique profile, increasing your chances of success.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Comprehensive Database</h3>
-            <p>
-              Access thousands of scholarships from national organizations,
-              local communities, and educational institutions.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Deadline Reminders</h3>
-            <p>
-              Never miss an application deadline with our automated notification
-              system that keeps you on track.
-            </p>
+          <div>
+            <h1 className="context">Find Scholarships Effortlessly <br /><span style={{color:'blue'}}>&</span> Secure Your Future</h1>
+            <p >Helping students connect with the best funding opportunities for their education. Trusted by thousands of students & institutions worldwide</p>
           </div>
         </section>
+  
+        {/* <section className="sholarship-container">
+          <Scholarships />
+        </section> */}
+      </div>
+      <div>
+          <h3 style={{alignContent:"center"}}>Designed for Every Student</h3>
+          <p>
+          For High School Graduates – Explore college scholarships tailored for you.
+          For College Students – Find funding for tuition, research, and more.
+          For International Students – Access global scholarship opportunities.
+          </p>
+        
       </div>
       <hr />
       <Footer />

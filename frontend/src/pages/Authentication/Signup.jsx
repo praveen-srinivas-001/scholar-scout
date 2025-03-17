@@ -1,6 +1,7 @@
 import { useState, useNavigate } from 'react';
 import '../../css/Auth.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Signup() {
   const navigate = useNavigate;
@@ -10,10 +11,10 @@ function Signup() {
 
   const handleSignup = async (event) => {
     event.preventDefault();
-    console.log("entered handlesubmit");
-    const req = await axios.post("https://localhost:3001", {
-      name: name,
-      email: email,
+    // console.log("entered handlesubmit");
+    const req = await axios.post("http://localhost:5000/signup", {
+      userName: name,
+      emailId: email,
       password: pass
     });
     console.log(req.data);
@@ -25,13 +26,12 @@ function Signup() {
     } else {
       alert(msg);
     }
-  };
+  }
 
   return (
-    <div id="signupModal" className="signup-modal">
-      <div className="modal-content">
+    <div className="signup-modal">
         <h2>Sign up</h2>
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleSignup} >
           <div className="form-input">
             <label htmlFor="signup-name">Full Name</label>
             <input type="text" id="signup-name" value={name} onChange={(e)=> setName(e.target.value)} required />
@@ -47,11 +47,6 @@ function Signup() {
             <input type="password" id="signup-password" value={pass} onChange={(e)=>setPass(e.target.value)}required />
           </div>
 
-          <div className="form-input">
-            <label htmlFor="signup-confirm">Confirm Password</label>
-            <input type="password" id="signup-confirm" required />
-          </div>
-
           <button type="submit" className="form-button">
             Create Account
           </button>
@@ -63,7 +58,6 @@ function Signup() {
           </div>
         </form>
       </div>
-    </div>
   );
 }
 

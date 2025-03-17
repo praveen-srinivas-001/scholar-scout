@@ -11,12 +11,12 @@ function Login() {
 
   const handleLogin = async(event) =>{
     event.preventDefault();
-    const req = await axios.post("http://localhost:5000",{
+    const req = await axios.post("http://localhost:5000/login",{
       emailId : emailId,
       password: password
     });
 
-    console.log(req.body());
+    console.log(req.data);
     alert(req.data.message);
     if(req.data.isLoggedIn){
       navigate("/home");
@@ -24,7 +24,6 @@ function Login() {
   }
   return (
       <div id="loginModal" className="login-modal">
-        <div className="modal-content">
          <h2>Login</h2>
 
           <form onSubmit={handleLogin} action={() => {navigate('/home')}}>
@@ -49,7 +48,6 @@ function Login() {
             </div>
           </form>
         </div>
-      </div>
 
   );
 }
